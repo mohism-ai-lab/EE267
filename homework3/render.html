@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<title>Rendering page</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+
+	<body>
+
+		<div id="container">
+
+			<!-- Bottons for controlling the scene -->
+			<div class="btnWrapper">
+
+				<div id="renderingSwitchBtn">Standard</div>
+				<div id="positionVal"></div>
+
+			</div>
+
+			<div class="renderCanvas"></div>
+
+		</div>
+
+		<div id="gaze"></div>
+
+		<!-- libraries -->
+		<script src="js/libs/three-r115.min.js" type="text/javascript"></script>
+		<script src="js/libs/stats-r17.min.js" type="text/javascript"></script>
+		<script src="js/libs/jquery-3.2.1.min.js" type="text/javascript"></script>
+		<script src="js/libs/FileSaver.min.js" type="text/javascript"></script>
+		<script src="js/libs/jszip.min.js" type="text/javascript"></script>
+
+		<!-- a model to be rendered -->
+		<script src="js/libs/TeapotBufferGeometry.js"></script>
+
+		<!-- shaders -->
+		<script src="js/shaders/vShaderMultiPhong.js" type="text/javascript"></script>
+		<script src="js/shaders/fShaderMultiPhong.js" type="text/javascript"></script>
+
+		<script src="js/shaders/vShaderFoveated.js" type="text/javascript"></script>
+		<script src="js/shaders/fShaderFoveated.js" type="text/javascript"></script>
+
+		<script src="js/shaders/vShaderDof.js" type="text/javascript"></script>
+		<script src="js/shaders/fShaderDof.js" type="text/javascript"></script>
+
+		<script src="js/shaders/vShaderAnaglyph.js" type="text/javascript"></script>
+		<script src="js/shaders/fShaderAnaglyph.js" type="text/javascript"></script>
+
+		<!-- some utility functions -->
+		<script src="js/utils.js" type="text/javascript"></script>
+
+		<!-- Our display parameters class -->
+		<script src="js/displayParameters.js" type="text/javascript"></script>
+
+		<!-- Our teapot class -->
+		<script src="js/teapot.js" type="text/javascript"></script>
+
+		<!-- Our state controller class -->
+		<script src="js/stateController.js" type="text/javascript"></script>
+
+		<!-- Our model/view/matrix class -->
+		<script src="js/transform.js" type="text/javascript"></script>
+
+		<!-- Our standard renderer class -->
+		<script src="js/standardRenderer.js" type="text/javascript"></script>
+
+		<!-- Our foveated renderer class -->
+		<script src="js/foveatedRenderer.js" type="text/javascript"></script>
+
+		<!-- Our DoF renderer class -->
+		<script src="js/dofRenderer.js" type="text/javascript"></script>
+
+		<!-- Our anaglyph renderer class -->
+		<script src="js/anaglyphRenderer.js" type="text/javascript"></script>
+
+		<!-- main scripts for rendering -->
+		<script src="js/render.js" type="text/javascript"></script>
+
+	</body>
+
+</html>

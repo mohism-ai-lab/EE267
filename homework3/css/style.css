@@ -1,0 +1,109 @@
+body {
+    padding:0;
+    margin:0;
+    overflow:hidden;
+    font-family:georgia;
+    text-align:center;
+}
+
+.container {
+    top: 0px;
+}
+
+p {
+    line-height: 8px;
+}
+
+.renderCanvas {
+    cursor: move;  /* fallback */
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+
+.renderCanvas:active {
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+}
+
+
+.btnWrapper {
+    position: absolute;
+    width: 0px;
+    height:0px;
+    display: table-cell;
+    overflow: visible;;
+}
+
+
+#modelBtn, #viewerPositionBtn, #viewerTargetBtn,
+#addPointLightBtn, #addDirectionalLightBtn,
+#pointLightCtrlBtn, #directionalLightCtrlBtn,
+#renderingSwitchBtn {
+    position: absolute;
+    background-color: rgb( 140, 21, 21 );
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Courier New;
+    color: #ffffff;
+    padding: 5px 13px 5px 13px;
+    text-decoration: none;
+    font-size: 13px;
+    height: 31px;
+    width: 62px;
+    text-align: center;
+    cursor: pointer;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* mobile webkit */
+}
+
+
+#renderingSwitchBtn {
+    top: 10px;
+    left: 100px;
+    width: 80px;
+}
+
+#positionVal {
+    position: absolute;
+    font-family: Courier New;
+    top: 15px;
+    left: 230px;
+    width: 400px;
+    color: #ffffff;
+    font-size: 15px;
+    text-align:left;
+}
+
+#displayParams {
+    position: absolute;
+    font-family: Courier New;
+    top: 0px;
+    left: 950px;
+    width: 400px;
+    color: #ffffff;
+    font-size: 15px;
+    text-align:left;
+}
+
+#gaze {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    display: block;
+    position: fixed;
+    bottom: 50vh;
+    left: 50vw;
+    pointer-events:none;
+    z-index: 101;
+    background: black;
+}

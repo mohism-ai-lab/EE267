@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<title>Rendering page</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+
+	<body>
+
+		<div id="container">
+
+			<!-- Bottons for controlling the scene -->
+			<div class="btnWrapper">
+
+				<div id="renderingSwitchBtn">Stereo</div>
+				<div id="positionVal"></div>
+
+			</div>
+
+			<div class="renderCanvas"></div>
+
+		</div>
+
+		<!-- the center line -->
+		<div style="height:100%; width:100%; position:fixed; top:0; left:0; pointer-events:none;">
+
+			<div id="center" style="margin:0 auto; height:100%; background:white; width:2px; pointer-events:none;"></div>
+
+		</div>
+
+		<!-- libraries -->
+		<script src="js/libs/three-r115.min.js" type="text/javascript"></script>
+		<script src="js/libs/stats-r17.min.js" type="text/javascript"></script>
+		<script src="js/libs/jquery-3.2.1.min.js" type="text/javascript"></script>
+		<script src="js/libs/FileSaver.min.js" type="text/javascript"></script>
+		<script src="js/libs/jszip.min.js" type="text/javascript"></script>
+
+		<!-- a model to be rendered -->
+		<script src="js/libs/TeapotBufferGeometry.js"></script>
+
+		<!-- shaders -->
+		<script src="js/shaders/vShaderMultiPhong.js" type="text/javascript"></script>
+		<script src="js/shaders/fShaderMultiPhong.js" type="text/javascript"></script>
+
+		<script src="js/shaders/vShaderUnwarp.js" type="text/javascript"></script>
+		<script src="js/shaders/fShaderUnwarp.js" type="text/javascript"></script>
+
+		<!-- some utility functions -->
+		<script src="js/utils.js" type="text/javascript"></script>
+
+		<!-- Our display parameters class -->
+		<script src="js/displayParameters.js" type="text/javascript"></script>
+
+		<!-- Our teapot class -->
+		<script src="js/teapot.js" type="text/javascript"></script>
+
+		<!-- Our state controller class -->
+		<script src="js/stateController.js" type="text/javascript"></script>
+
+		<!-- Our model/view/matrix class -->
+		<script src="js/transform.js" type="text/javascript"></script>
+
+		<!-- Our standard renderer class -->
+		<script src="js/standardRenderer.js" type="text/javascript"></script>
+
+		<!-- Our stereo unwarp renderer class -->
+		<script src="js/stereoUnwarpRenderer.js" type="text/javascript"></script>
+
+		<!-- main scripts for rendering -->
+		<script src="js/render.js" type="text/javascript"></script>
+
+	</body>
+
+</html>
