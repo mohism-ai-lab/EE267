@@ -66,8 +66,6 @@ var MVPmat = function ( dispParams ) {
 	//               zero for non-stereo rendering)
 	function computeViewTransform( state, halfIpdShift ) {
 
-		/* TODO (2.4.1) View Matrix Computation - Update this function! */
-
 		var viewerPosition = state.viewerPosition;
 
 		var viewerTarget = state.viewerTarget;
@@ -148,13 +146,7 @@ var MVPmat = function ( dispParams ) {
 			this.anaglyphViewMat.R =
                 computeViewTransform( state, - dispParams.ipd / 2 );
 
-			/* TODO (2.4.2) Projection Matrix Computation */
-
 			// Compute projection matrix
-//            var right =
-//                ( dispParams.canvasWidth * dispParams.pixelPitch + Math.abs(dispParams.ipd))
-//                    * ( state.clipNear / (2*dispParams.distanceScreenViewer) );
-
 			var right =
                 ( dispParams.canvasWidth * dispParams.pixelPitch + dispParams.ipd)
                     * ( state.clipNear / (2*dispParams.distanceScreenViewer) );

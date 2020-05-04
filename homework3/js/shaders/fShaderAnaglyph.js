@@ -5,7 +5,7 @@
  * @version 2020/04/01
  */
 
-/* TODO (2.4.3) Color Channel Multiplexing */
+/* Color Channel Multiplexing */
 
 var shaderID = "fShaderAnaglyph";
 

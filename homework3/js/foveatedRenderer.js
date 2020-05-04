@@ -39,8 +39,6 @@ var FoveatedRenderer = function ( webglRenderer, dispParams ) {
 	// Eccentricity angle at which a 4x reduction in resolution is imperceivable
 
     var e1 = computeEcc(4*2*pixelVA);
-    //4*2*pixelVA
-    //computeEcc(4*2*this.pixelVA);
 	// Eccentricity angle at which a 8x reduction in resolution is imperceivable
     var e2 = computeEcc(8*2*pixelVA);
     //computeEcc(8*2*this.pixelVA);
@@ -100,9 +98,6 @@ var FoveatedRenderer = function ( webglRenderer, dispParams ) {
 	// OUTPUT
 	// visual angle per pixel in [degree]
 	function computePixelVA( pixelPitch, distanceScreenViewer ) {
-
-		/* TODO (2.2.1) Visual Angle of a Pixel */
-        // V  = 2 * arctan(S/2D)
         var angle = 2*Math.atan(pixelPitch/(2*distanceScreenViewer))*360/(2*Math.PI)
         return angle;
 

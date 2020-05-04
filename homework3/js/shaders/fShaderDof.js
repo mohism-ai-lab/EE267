@@ -5,7 +5,7 @@
  * @version 2020/04/01
  */
 
-/* TODO (2.3) DoF Rendering */
+/* DoF Rendering */
 
 var shaderID = "fShaderDof";
 
@@ -73,7 +73,7 @@ float computeCoC( float fragDist, float focusDist ) {
 
 // compute depth of field blur and return color at current fragment
 vec3 computeBlur() {
-    /* TODO (2.3.3) Retinal Blur */
+    /* Retinal Blur */
     float d_frag = distToFrag(textureCoords);
     float d_focus = distToFrag(gazePosition/windowSize);
     float blurR = computeCoC(d_frag, d_focus);

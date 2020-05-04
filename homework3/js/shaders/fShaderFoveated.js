@@ -5,7 +5,7 @@
  * @version 2020/04/01
  */
 
-/* TODO (2.2.4) Fragment Shader Foveation Blur */
+/*Fragment Shader Foveation Blur */
 
 var shaderID = "fShaderFoveated";
 
@@ -52,19 +52,6 @@ uniform float outerBlurKernel[int(outerKernelRad)*2+1];
 
 
 void main() {
-
-    //2d blur kernel: outerproduct (1d blur kernel, 1d blur kernel);
-   // float zNDC = 2*texture2D( textureMap, textureCoords ).r – 1;
-    //mat5x5 middle_blur = outerProduct(middleBlurKernel, middleBlurKernel);
-    //mat9x9 outer_blur = outerProduct(outerBlurKernel, outerBlurKernel);
-//    kmSize = middleKernelRad;
-//    koSize = outerKernelRad;
-//    const float pi = 3.1415926535897932384626;
-//    float mar = 2.0*pixelVA*360.0/(2.0*pi);
-//    float e = computeEcc(mar); //if not:
-//    float w_0=  1.0/48.0;
-//    float e = (mar - w_0)/0.0275;
-
     vec2 pixelSize = 1.0/windowSize;
 
     float distance = distance(textureCoords*windowSize, gazePosition)* pixelVA;
@@ -97,7 +84,6 @@ void main() {
             gl_FragColor = colour;
 
         }
-        //gl_FragColor = colour;
     }
 }
 ` );

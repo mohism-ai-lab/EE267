@@ -5,8 +5,6 @@
  * @version 2020/04/01
  */
 
-/* TODO (2.1.1), (2.1.3) */
-
 var shaderID = "vShaderGouraudDiffuse";
 
 var shader = document.createTextNode( `
