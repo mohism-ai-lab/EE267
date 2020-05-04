@@ -70,7 +70,7 @@ var StateController = function ( dispParams ) {
 		attenuation: new THREE.Vector3( 2.0, 0.0, 0.0 ),
 
 		/* TODO (2.2.3) Update this parameter with your values  */
-		lensDistortion: new THREE.Vector2( 0, 0 ),
+		lensDistortion: new THREE.Vector2( 0.39, 0.14 ),
 
 	};
 
