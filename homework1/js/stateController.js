@@ -146,9 +146,7 @@ var StateController = function ( dispParams ) {
 
 	}
 
-	// A function to compute the mouse movement between frames.
-	// Do not forget to update previousPosition variable.
-	//
+    // A function to compute the mouse movement between frames.
 	// INPUT
 	// x: x position of a mouse cursor in jQuery's coordinate
 	// y: y position of a mouse cursor in jQuery's coordinate
@@ -158,8 +156,6 @@ var StateController = function ( dispParams ) {
 	// OUTPUT
 	// the mouse movement between frames in Three's coordinate as THREE.Vector2
 	function computeMovement( x, y, previousPosition ) {
-
-		/* TODO (2.1.1.1) Mouse Movement */
 
         var change_x = x - previousPosition.x;
         var change_y = y - previousPosition.y;
@@ -184,11 +180,6 @@ var StateController = function ( dispParams ) {
 	// We have already defined the alias as "_this" at the top of this class.
 	// We follow this convention throughout homework.
 	function updateModelParams( e, movement ) {
-
-		/* TODO
-		 * (2.1.1.2) Mapping Mouse Movement to Matrix Parameters
-		 * (2.1.2) Model Rotation
-		 */
 
 		var ctrlKey = e.metaKey // for Mac's command key
 			|| ( navigator.platform.toUpperCase().indexOf( "MAC" ) == - 1
@@ -223,9 +214,6 @@ var StateController = function ( dispParams ) {
 	// e: jQuery event
 	// movement: the mouse movement computed by computeMovement() function
 	function updateViewPosition( e, movement ) {
-
-		/* TODO (2.2.1) Move viewer position */
-
 		var ctrlKey = e.metaKey // for Mac's command key
 			|| ( navigator.platform.toUpperCase().indexOf( "MAC" ) == - 1
 				&& e.ctrlKey );
@@ -254,8 +242,6 @@ var StateController = function ( dispParams ) {
 	// movement: the mouse movement computed by computeMovement() function
 	function updateViewTarget( e, movement ) {
 
-		/* TODO (2.2.2) Move viewer target */
-
 		var ctrlKey = e.metaKey // for Mac's command key
 			|| ( navigator.platform.toUpperCase().indexOf( "MAC" ) == - 1
 				&& e.ctrlKey );
@@ -283,11 +269,6 @@ var StateController = function ( dispParams ) {
 	// e: jQuery event
 	// movement: the mouse movement computed by computeMovement() function
 	function updateProjectionParams( e, movement ) {
-
-		/* TODO (2.3.1) Implement Perspective Transform */
-        //+y mouse movement (vertical to the bottom) pull clipping  plane closer to camera 
-        // -y mouse movements will push it farther away.
-        //clipNear should be clamped to at least 1.
         _this.clipNear = 1;
         _this.clipFar += movement.y;
 	}

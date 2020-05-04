@@ -5,8 +5,6 @@
  * @version 2020/04/01
  */
 
-/* TODO (2.2.1) */
-
 var shaderID = "vShaderPhong";
 
 var shader = document.createTextNode( `

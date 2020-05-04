@@ -20,7 +20,6 @@ var MVPmat = function ( dispParams ) {
 	// Alias for accessing this from a closure
 	var _this = this;
 
-
 	// A model matrix
 	this.modelMat = new THREE.Matrix4();
 
@@ -113,8 +112,6 @@ var MVPmat = function ( dispParams ) {
 	// Notations for the input is the same as in the class.
 	function computeOrthographicTransform(
 		left, right, top, bottom, clipNear, clipFar ) {
-
-		/* TODO (2.3.2) Implement Orthographic Projection */
 
 		return new THREE.Matrix4().set(
             2/(right-left), 0, 0, -(right + left)/(right - left),
