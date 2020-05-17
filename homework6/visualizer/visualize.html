@@ -1,0 +1,89 @@
+<html>
+	<head>
+		<title>VIZ VR</title>
+	    <style type="text/css">
+        body {
+          font-family: monospace;
+          background-color: #f0f0f0;
+          margin: 0px;
+          overflow: hidden;
+        }
+        #container {
+          position: relative;
+        }
+        #info {
+          position: absolute;
+          top: 10;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          overflow: hidden;
+          text-align: center;
+        }
+
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 5px 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+        #QC {
+          opacity:0.5
+        }
+
+        #c1, #c2, #c3 {
+          width: 32%;
+          text-align: center;
+          display: inline-block;
+        }
+
+
+
+        </style>
+
+	</head>
+	<body>
+    <div id="container">
+      <div id="info">
+          Select Mode:
+          <input type="radio" name="mode" value="0"> 3D Orientation
+          <input type="radio" name="mode" value="1" checked> 6D Pose <br>
+        <p>Scroll to zoom, and drag to move the camera</p>
+
+        <div id="infoHW5">
+          <br>
+          <div id="c1"><p>Gyro Only</p></div>
+          <div id="c2"><p>Accelerometer Only</p>
+			  <p>As the yaw angle is set to 0 degree in this visualization, weird rotation may happen when the pitch or roll angle exceeds 90 degrees.</p>
+		  </div>
+          <div id="c3"><p>Complementary Filter</p></div>
+        </div>
+
+        <div id="infoHW6">
+          <p>Translation (X,Y,Z in cm): <span id="trans">hello</span></p>
+          <p>Rotation (P,Y,R in deg) &nbsp: <span id="rot"></span></p>
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <script src="js/lib/three.min.js"></script>
+    <script src="js/lib/Projector.js"></script>
+    <script src="js/lib/CanvasRenderer.js"></script>
+    <script src="js/lib/jquery-2.1.1.min.js"></script>
+    <script src="js/lib/socket.io.js"></script>
+    <script src="js/lib/TrackballControls.js"></script>
+    <script src="js/SceneUtil.js"></script>
+    <script src="js/StateController.js"></script>
+    <script src="js/SceneDiodes.js"></script>
+    <script src="js/SceneHW5.js"></script>
+    <script src="js/SceneHW6.js"></script>
+    <script src="js/visualize.js"></script>
+
+	</body>
+</html>
